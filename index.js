@@ -17,7 +17,7 @@ class ListItem {
 class LinkedList {
   constructor(...args) {
     this.head = null;
-    this.tale = null;
+    this.tail = null;
     for (const item of args) {
       this.push(item);
     }
@@ -27,13 +27,15 @@ class LinkedList {
 
     if (this.length === 0) {
       this.head = newItem;
-      this.tale = newItem;
-    } else{
-      this.tale.next = newItem;
-      newItem.prev = this.tale;
-      this.tale = newItem;
+      this.tail = newItem;
+    } else {
+      this.tail.next = newItem;
+      newItem.prev = this.tail;
+      this.tail = newItem;
     }
 
     return ++this.length;
   }
 }
+
+const list = new LinkedList(1, true, 3, "Alsace", false, 6);
