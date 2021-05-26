@@ -4,7 +4,9 @@ class ListItem {
     this.next = null;
     this.prev = null;
   }
-
+  /**
+   * 
+   */
   get value() {
     return this._value;
   }
@@ -39,3 +41,14 @@ class LinkedList {
 }
 
 const list = new LinkedList(1, true, 3, "Alsace", false, 6);
+
+/**
+ * 
+ */
+// getCount(){
+//   if(this.friends.length){
+//     return this.friends.reduce((result,friend)=> result+friend.getCount(),this.count);
+//   }
+//   return this.count;
+// }
+
